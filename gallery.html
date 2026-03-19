@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priced Rite Landscaping & Maintenance Inc.</title>
+  <meta name="description" content="Browse our landscaping project gallery. See Priced Rite Landscaping & Maintenance Inc.’s quality work across Suffolk County, NY homes.">
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="imgs/logo.webp" />
+  
+  <!-- Preconnect to improve Google Fonts loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload the Google Font, then switch rel to stylesheet -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" 
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for users with JS disabled -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+  </noscript>
+</head>
+<body>
+  <script src="scripts.js" defer></script>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+        <a href="index.html"><img src="imgs/logo.webp" alt="Logo" loading="lazy" height="100px" width="auto" /></a>
+      </div>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about-us.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        
+        <!-- No class here -->
+        <a href="https://www.instagram.com/pricedritelandscaping/">
+          <img src="imgs/insta.webp" alt="Instagram" style="height: 20px;">
+        </a>
+        
+        <!-- No class here -->
+        <a href="contact-us.html" class="btn-see-work">Contact Us</a>
+      </nav>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <h1 class="gallery-title">Gallery</h1>
+    <div class="gallery-container">
+      
+      <div class="gallery-item">
+        <img src="imgs/house1.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house2.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house3.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house4.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house5.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house6.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house7.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house8.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house9.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house10.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house11.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="imgs/house12.webp" alt="Weekly Maintenance" loading="lazy" onclick="openLightbox(this)"/>
+        <p>Weekly Maintenance</p>
+      </div>
+
+      <!-- Add more items as needed! -->
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-section">
+      <h4>Priced Rite Landscaping & Maintenance Inc.</h4>
+      <p>P.O. Box 1208<br>
+        Medford, NY 11763<br>
+        (631) 730-3884<br>
+        <a href="mailto:pricedritelandscaping@gmail.com">pricedritelandscaping@gmail.com</a>
+      </p>
+    </div>
+    <div class="footer-section">
+      <h4>Pages</h4>
+      <p><a href="index.html">Home</a><br>
+        <a href="about-us.html">About</a><br>
+        <a href="gallery.html">Gallery</a><br>
+        <a href="contact-us.html">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="site-credit">
+    <p>Created and hosted by <a href="https://www.litechguys.com/" target="_blank">LI Tech Guys LLC</a></p>
+  </div>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Expanded Image" />
+  </div>
+
+</body>
+</html>

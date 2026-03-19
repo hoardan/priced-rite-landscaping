@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priced Rite Landscaping & Maintenance Inc.</title>
+  <meta name="description" content="Contact Priced Rite Landscaping & Maintenance Inc. for professional landscaping services in Suffolk County, NY. Call (631) 730-3884 for a free estimate.">
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="imgs/logo.webp" />
+  
+  <!-- Preconnect to improve Google Fonts loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload the Google Font, then switch rel to stylesheet -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" 
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for users with JS disabled -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+  </noscript>
+</head>
+<body>
+  <script src="scripts.js" defer></script>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+        <a href="index.html"><img src="imgs/logo.webp" alt="Logo" loading="lazy" height="100px" width="auto" /></a>
+      </div>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about-us.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        
+        <!-- No class here -->
+        <a href="https://www.instagram.com/pricedritelandscaping/">
+          <img src="imgs/insta.webp" alt="Instagram" style="height: 20px;">
+        </a>
+        
+        <!-- No class here -->
+        <a href="contact-us.html" class="btn-see-work">Contact Us</a>
+      </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h1>Contact Us</h1>
+        <p>P.O. Box 1208<br>Medford, NY 11763</p>
+        <p><a href="mailto:pricedritelandscaping@gmail.com">pricedritelandscaping@gmail.com</a></p>
+        <p>(631) 730-3884</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/pricedritelandscaping/">
+            <img src="imgs/insta.webp" alt="Instagram Icon" style="height: 20px;">
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="https://formspree.io/f/mblgjozq" method="POST">
+          <div class="form-group">
+            <label for="first-name">First Name <span>(required)</span></label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name <span>(required)</span></label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="phone">Phone <span>(required)</span></label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group full-width">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Message <span>(required)</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="form-group full-width">
+            <button type="submit" class="btn-submit">Send</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <h4>Priced Rite Landscaping & Maintenance Inc.</h4>
+      <p>P.O. Box 1208<br>
+        Medford, NY 11763<br>
+        (631) 730-3884<br>
+        <a href="mailto:pricedritelandscaping@gmail.com">pricedritelandscaping@gmail.com</a>
+      </p>
+    </div>
+    <div class="footer-section">
+      <h4>Pages</h4>
+      <p><a href="index.html">Home</a><br>
+        <a href="about-us.html">About</a><br>
+        <a href="gallery.html">Gallery</a><br>
+        <a href="contact-us.html">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="site-credit">
+    <p>Created and hosted by <a href="https://www.litechguys.com/" target="_blank">LI Tech Guys LLC</a></p>
+  </div>
+
+</body>
+</html>

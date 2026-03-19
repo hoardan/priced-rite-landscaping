@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priced Rite Landscaping & Maintenance Inc.</title>
+  <meta name="description" content="Priced Rite Landscaping & Maintenance Inc. offers reliable residential landscaping services across Suffolk County, NY. Free estimates!">
+  
+    <style>
+      /* Resets and global defaults */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+    
+      body {
+        padding-top: 100px;
+        font-family: 'Lora', serif;
+        background-color: #ffffff;
+        color: #000000;
+        line-height: 1.8;
+        letter-spacing: 0.3px;
+      }
+    
+      /* Header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+    
+      header.scrolled {
+        padding: 10px 50px;
+      }
+    
+      .logo img {
+        height: 100px;
+        width: auto;
+        transition: height 0.3s ease;
+      }
+      
+      header.scrolled .logo img {
+        height: 60px;
+        width: auto;
+      }
+    
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+    
+      nav a.nav-link {
+        text-decoration: none;
+        color: #000000;
+        font-size: 16px;
+        position: relative;
+        padding-bottom: 5px;
+      }
+    
+      nav a.nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ccc;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    
+      nav a.nav-link:hover::after {
+        opacity: 1;
+      }
+    
+      nav a.nav-link.active::after {
+        background-color: #000;
+        opacity: 1;
+      }
+    
+      /* Hero Section */
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 88vh;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    
+      .hero-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    
+      .hero-image::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+    
+      .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        text-align: center;
+        z-index: 2;
+      }
+    
+      .hero-text h1 {
+        font-size: 48px;
+        font-weight: normal;
+        margin: 0;
+      }
+    
+      /* Down Arrow */
+      .down-arrow {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+        cursor: pointer;
+        z-index: 2;
+      }
+    
+      .down-arrow svg {
+        stroke: #ffffff;
+        transition: stroke 0.3s ease;
+      }
+    
+      .down-arrow:hover svg {
+        stroke: #cccccc;
+      }
+    
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        40% {
+          transform: translateX(-50%) translateY(-10px);
+        }
+        60% {
+          transform: translateX(-50%) translateY(-5px);
+        }
+      }
+      
+      /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 150px;
+      }
+
+      .hero {
+        height: 80vh;
+      }
+
+      .hero-text h1 {
+        font-size: 24px;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: initial;
+        max-width: 90vw;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        white-space: wrap;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .logo img {
+        height: 80px; /* Normal state on mobile */
+      }
+      
+      header.scrolled .logo img {
+        height: 50px; /* Scrolled state on mobile */
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .footer-section {
+        max-width: 100%;
+      }
+    }
+    </style>
+  
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  
+  <link rel="icon" type="image/png" href="imgs/logo.webp" />
+  
+  <!-- Preconnect to improve Google Fonts loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload the Google Font, then switch rel to stylesheet -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" 
+    onload="this.onload=null;this.rel='stylesheet'">
+    
+  <link rel="preload" as="image" href="imgs/logo.webp" />
+  <link rel="preload" as="image" href="imgs/main_page-1920.webp" />
+  <link rel="preload" as="image" href="imgs/main_page-1280.webp" />
+  <link rel="preload" as="image" href="imgs/main_page-768.webp" />
+  <link rel="preload" as="image" href="imgs/main_page-480.webp" />
+
+  <!-- Fallback for users with JS disabled -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap">
+  </noscript>
+</head>
+<body>
+<script src="scripts.js" defer></script>
+
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="imgs/logo.webp" alt="Logo" width="200" height="80" loading="lazy" /></a>
+    </div>
+    <nav>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about-us.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        
+        <!-- No class here -->
+        <a href="https://www.instagram.com/pricedritelandscaping/">
+          <img src="imgs/insta.webp" alt="Instagram" width="20" height="20">
+        </a>
+        
+        <!-- No class here -->
+        <a href="contact-us.html" class="btn-see-work">Contact Us</a>
+      </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-image">
+      <img 
+              src="imgs/main_page-1920.webp"
+              srcset="
+                imgs/main_page-480.webp 480w,
+                imgs/main_page-768.webp 768w,
+                imgs/main_page-1280.webp 1280w,
+                imgs/main_page-1920.webp 1920w
+              "
+              sizes="(max-width: 480px) 100vw,
+                     (max-width: 768px) 100vw,
+                     (max-width: 1280px) 100vw,
+                     100vw"
+              alt="Priced Rite Landscaping"
+              width="1920"
+              height="1080"
+          />
+      <div class="hero-text">
+        <h1>Priced Rite Landscaping & Maintenance Inc.</h1>
+      </div>
+      <a href="#our-work" class="down-arrow">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Our Work Section -->
+  <section class="our-work-section" id="our-work">
+    <h2>Our Work</h2>
+    <p>
+      Priced Rite Landscaping and Maintenance Inc. is a fully licensed and insured residential landscaping company with over 25 years of experience serving Long Island. We proudly provide top-quality landscaping services to a variety of towns across Suffolk County, including Bayport, Blue Point, Centereach, Farmingville, Holbrook, Holtsville, Lake Grove, Medford, Nesconset, Patchogue, Ronkonkoma, and Sayville. Specializing in residential property care, our services include weekly maintenance, spring and fall clean ups, topsoil, mulch, sod and plant installation, seeding, hedge and shrub trimming, thatching, aerating, bobcat services, small landscape design installation and much more. At Priced Rite Landscaping, we are known for our exceptional property maintenance and professional, dedicated crew. Let us help you transform your landscape into a beautiful, well-maintained space that enhances the beauty and value of your home.
+    </p>
+    <p>
+      Please contact us for your free estimate at (631) 730-3884.
+    </p>
+    <a href="gallery.html" class="btn-see-work">See Our Work</a>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-section">
+      <h4>Priced Rite Landscaping & Maintenance Inc.</h4>
+      <p>P.O. Box 1208<br>
+        Medford, NY 11763<br>
+        (631) 730-3884<br>
+        <a href="mailto:pricedritelandscaping@gmail.com">pricedritelandscaping@gmail.com</a>
+      </p>
+    </div>
+    <div class="footer-section">
+      <h4>Pages</h4>
+      <p><a href="index.html">Home</a><br>
+        <a href="about-us.html">About</a><br>
+        <a href="gallery.html">Gallery</a><br>
+        <a href="contact-us.html">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="site-credit">
+    <p>Created and hosted by <a href="https://www.litechguys.com/" target="_blank">LI Tech Guys LLC</a></p>
+  </div>
+
+</body>
+</html>
