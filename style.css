@@ -12,6 +12,13 @@
         color: #000000;
         line-height: 1.8;             /* Global line spacing */
         letter-spacing: 0.3px;        /* Optional global letter spacing */
+        display:flex;
+        flex-direction:column;
+        min-height:100vh;
+      }
+
+      main{
+        flex:1;
       }
 
       header {
